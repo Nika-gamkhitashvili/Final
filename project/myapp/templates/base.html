@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>My App</h1>
+<nav>
+    <ul>
+        {% if user.is_authentidicated %}
+        <li><a href="{% url 'register' %}">register</a></li>
+        <li><a href="{% url 'login' %}">log in</a></li>
+        <li><a href="{% url 'logout' %}">log out</a></li>
+        {% endif %}
+
+
+
+    </ul>
+
+
+</nav>
+{% block content %}{% endblock %}
+</body>
+</html>

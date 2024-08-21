@@ -1,0 +1,65 @@
+#Header{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(36, 37, 42);
+}
+.SerchButton a {
+    text-decoration: none;
+    color: white;
+}
+
+.SerchButton{
+    margin-right: 5px;
+    text-decoration: none;
+    font-family:'poppins' , sans-serif;
+    font-size: 13px;
+    padding: 2px 25px;
+    background-color: transparent;
+    border: 2.5px solid white;
+    letter-spacing: 1.5px;
+    border-radius: 50px;
+    cursor: pointer;
+    outline:none;
+}
+.serchBtn{
+    display: flex;
+    align-items: center;
+    
+}
+#Title a{
+    text-decoration: none;
+    color: white;
+}
+#Title{
+    color: white;
+    font-size: 40px;
+    }
+.ChoseCategory{
+    color: white;
+}
+.card-img-top{
+    width: 200px !important;
+    height: 250px !important;
+    margin-left: 40px ;
+    
+    
+}
+.card{
+    border: 3px solid black !important;
+    border-radius: 200px;
+
+
+}
+
+
+.section{ 
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.TableOfContents{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
