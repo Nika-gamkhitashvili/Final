@@ -1,0 +1,30 @@
+{% load static %}
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+{% endblock %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+</head>
+<body>
+    <ul class="list-group mt-3" style="width: 700px;">
+        {% for product in products %}
+            <li class="list-group-item d-flex justify-content-between align-items-center mt-1" id="searchResults">
+                <span class="product-name">{{ product.name }}</span>
+                <p class="product-quantity">Quantity: {{ product.quantity }}</p>
+                <p class="product-price">Price: {{ product.price }}</p>
+                <img src="media/{{ product.image }}" alt="{{ product.name }}" style="height: 30px; width: 20px" />
+                {% if user.is_authenticated %}
+                    <a class="btn btn-outline-primary add-to-cart" href="{% url 'ecommerce:add-to-cart' product.id %}">Add To Cart</a>
+                {% endif %}
+                {% empty %}
+                    <h1>No Content</h1>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
